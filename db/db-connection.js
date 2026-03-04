@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const getConnection = async () => {
   try {
-    const url = "mongodb+srv://caroalvarezdev:MongoDBCarolina91@peliculasapp.ezdeh7g.mongodb.net/?appName=PeliculasApp";
+    const url = process.env.MONGO_URI;
 
     await mongoose.connect(url);
 
